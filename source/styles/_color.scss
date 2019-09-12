@@ -1,0 +1,23 @@
+/*
+* ==================================
+*            C O L O R S
+* ==================================
+*/
+
+/* COOLORS EXPORT */
+$color1: rgba(0, 15, 8, 1);
+$color2: rgba(51, 49, 46, 1);
+$color3: rgba(242, 244, 203, 1);
+$color4: rgba(251, 245, 243, 1);
+$color5: rgba(255, 49, 45, 1);
+
+/* BASE */
+$color-primary: $color5;
+$color-secondary: $color4;
+$color-tertiary: $color1;
+
+
+/* COLORS */
+$color-white: $color-secondary;
+$color-red: $color-primary;
+$color-black: $color-tertiary;

@@ -1,0 +1,62 @@
+/*
+* ==================================
+*        B A S E   S T Y L E S
+* ==================================
+*/
+
+@import './color';
+@import './typography';
+
+/* BODY SETTINGS */
+$bodyBackground: $color-white;
+$bodyColor: $color-black;
+$bodyFontFamily: $systemFonts;
+$bodyFontSize: 10px;
+$bodyLineHeight: 1.5;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background: $bodyBackground;
+  color: $bodyColor;
+  font-family: $bodyFontFamily;
+  font-size: $bodyFontSize;
+  line-height: $bodyLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+a:hover { text-decoration: none; }
+
+/* BLOCK ELEMENTS */
+$blockMargin: 2rem;
+$blockMarginLarge: 3.5rem;
+
+%blockMargin {
+  margin: 0 0 $blockMargin;
+
+  @include breakpoint(large) {
+    margin: 0 0 $blockMarginLarge;
+  }
+}
+
+/* PARAGRAPHS */
+p { @extend %blockMargin; }
+
+/* LISTS */
+ul,
+ol {
+  @extend %blockMargin;
+  padding: 0 0 0 3rem;
+  list-style-position: outside;
+}

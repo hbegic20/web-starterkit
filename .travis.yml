@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "10"
+
+branches:
+  only:
+    - master
+    - develop
+
+install:
+  - npm install
+
+script:
+  - npm run lint
+  - npm run build
+
+notifications:
+  email:
+    recipients:
+    - rizvan.adnan@gmail.com
+    on_success: change
+    on_failure: always
+
+cache:
+  directories:
+    - node_modules

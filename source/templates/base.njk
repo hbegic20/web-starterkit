@@ -1,0 +1,57 @@
+{# Imports #}
+
+{# Config #}
+{% set lang = "bs" %}
+{% set title = "Starterkit" %}
+{% set description = "" %}
+{% set OG__TITLE = "" %}
+{% set OG__URL = "" %}
+{% set OG__DESC = "" %}
+{% set OG__IMAGE = "" %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    {# OG Tags #}
+    <meta property="og:title" content="{{ OG__TITLE }}">
+    <meta property="og:url" content="{{ OG__URL }}">
+    <meta property="og:description" content="{{ OG__DESC }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ OG__IMAGE }}">
+    {# Disable tap highlight on IE #}
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no">
+    {# Favicon #}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ staticPath }}images/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ staticPath }}images/favicon.png">
+
+    <title>{{ title }}</title>
+
+    {# CSS #}
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    {% block header  %}
+    {% endblock %}
+
+    <main id="main">
+      {% block main %}{% endblock %}
+    </main>
+
+    {% block footer %}
+    {% endblock %}
+
+    {# Polyfills #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/unfetch/polyfill"></script>
+
+    {# Bundle #}
+    <script src="/static/js/common.bundle.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

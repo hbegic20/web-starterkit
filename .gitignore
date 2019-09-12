@@ -1,0 +1,17 @@
+# dir
+node_modules
+/public
+/design
+
+# dir bp
+/redis-data
+/uploads
+
+# files
+*.log
+.DS_Store
+Thumbs.db
+package-lock.json
+
+#docs
+docs/.vuepress/dist

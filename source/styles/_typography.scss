@@ -1,0 +1,104 @@
+/*
+* ==================================
+*        T Y P O G R A P H Y
+* ==================================
+*/
+
+/*
+ * - Converters
+ *
+ * http://www.fontsquirrel.com/tools/webfont-generator
+ * http://everythingfonts.com/ttf-to-woff2
+ *
+ * Font face example
+ *
+ * @font-face {
+ *  font-family: Ubuntu;
+ *  src: url(/font/ubuntu/ubuntu-regular.woff2) format('woff2'),
+ *       url(/font/ubuntu/ubuntu-regular.woff) format('woff');
+ *  font-weight: normal;
+ *  font-style: normal;
+ */
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url(../fonts/Gotham/GothamBook.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Book--Italic';
+  src: url(../fonts/Gotham/GothamBookItalic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url(../fonts/Gotham/GothamLight.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url(../fonts/Gotham/GothamBold.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Bold--Italic';
+  src: url(../fonts/Gotham/GothamBoldItalic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url(../fonts/Gotham/GothamMedium.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$systemFonts: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+/* FONT WEIGHTS */
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+
+/* FONT-SIZES */
+$small: 1.2rem;
+$regular: 1.6rem;
+$medium: 2.4rem;
+$large: 3.2rem;
+$ultra: 4.6rem;
+
+/* FONTS */
+$font-normal: 'Gotham-Book', sans-serif;
+$font-normal--italic: 'Gotham-Book--Italic', sans-serif;
+
+$font-bold: 'Gotham-Bold', sans-serif;
+$font-bold--italic: 'Gotham-Bold--Italic', sans-serif;
+
+$font-light: 'Gotham-Light', sans-serif;
+$font-medium: 'Gotham-Medium', sans-serif;
+
+/* HEADINGS */
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  }
+
+  @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+#{headings()} {
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+}

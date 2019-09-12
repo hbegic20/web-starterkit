@@ -1,0 +1,48 @@
+/*
+* ==================================
+*           H E L P E R S
+* ==================================
+*/
+
+.starterkit {
+  text-align: center;
+  font-size: $medium;
+
+  &__author { font-size: $regular; }
+
+  &__title {
+    font-size: $bold;
+    color: $color-black;
+  }
+
+  .color-container {
+    display: inline-block;
+    height: 7rem;
+    width: 7rem;
+    margin: 0 3rem 0 0;
+    border: 0.1rem solid blueviolet;
+  }
+
+  .thin { font-family: $font-light; }
+
+  .normal { font-family: $font-normal; }
+
+  .normal--italic { font-family: $font-normal--italic; }
+
+  .medium { font-family: $font-medium; }
+
+  .bold { font-family: $font-bold; }
+
+  .bold--italic { font-family: $font-bold--italic; }
+
+  .color1 { background: $color1; }
+
+  .color2 { background: $color2; }
+
+  .color3 { background: $color3; }
+
+  .color4 { background: $color4; }
+
+  .color5 { background: $color5; }
+
+}
